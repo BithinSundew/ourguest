@@ -9,8 +9,8 @@
     "test": "ng test",
     "dev:ssr": "ng run our-guest:serve-ssr",
     "serve:ssr": "node dist/our-guest/server/main.js",
-    "build:ssr": "ng build --prod && ng run test-angular-universal:server",
-    "prerender": "ng run test-angular-universal:prerender"
+    "build:ssr": "ng build --prod && ng run our-guest:server",
+    "prerender": "ng run our-guest:prerender"
   },
   "private": true,
   "dependencies": {
