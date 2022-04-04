@@ -1,0 +1,34 @@
+
+// RESPONSIVE
+$gap-dir:(
+    'l': left,
+    'r': right,
+    't': top,
+    'b': bottom
+);
+
+@mixin r-margin($min-fs, $max-fs, $dir: '', $max-vp: 1920){
+  @if ($dir != '') {
+    margin-#{map-get($gap-dir, $dir)}: clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+  } @else{
+    margin: clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+  }
+} 
+
+@mixin r-padding($min-fs, $max-fs, $dir: '', $max-vp: 1920){
+  @if ($dir != '') {
+    padding-#{map-get($gap-dir, $dir)}: clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+  } @else{
+    padding: clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+  }
+}
+
+@mixin r-typo($min-fs, $max-fs, $max-vp: 1920){
+  font-size: calc(#{$min-fs+'px'} + (#{$max-fs} - #{$min-fs}) * (100vw - 320px) / (#{$max-vp} - 320));
+  font-size: clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+}
+
+@mixin r-width($min-fs, $max-fs, $max-vp: 1920){
+  width: clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+  flex: 0 0 clamp(#{$min-fs+'px'}, #{((100 * $max-fs) / $max-vp)+'vw'}, #{$max-fs + 'px'});
+}

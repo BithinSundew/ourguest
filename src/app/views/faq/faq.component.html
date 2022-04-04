@@ -1,0 +1,112 @@
+<main>
+  <section class="common_header pt-0 text-center">
+      <figure><img src="assets/img/heros/faq_banner.jpg" class="w-100"/></figure>
+      <div class="maincontwrp">
+          <div class="main-container">
+              <div class="inner-container common">
+                  <h1>FAQ’S</h1>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="termsdetails mt-0 bg--">
+      <div class="main-container">
+          <div class="inner-container">
+              <article class="text-center flow-rootx">
+                  <h3 class="h3">Travelling with OURGUEST.in</h3>
+                  <p class="h5">A place for your questions along with our policies and guidelines</p>
+              </article>
+              <div class="accord">
+                <accordion [showArrows]="true">
+                  <ng-container *ngFor="let item of accordionList">
+                    <accordion-group heading="{{ item?.heading }}">
+                      {{ item?.bodyText }}
+                    </accordion-group>
+                  </ng-container>
+                </accordion>
+                  <div class="termsbox">
+                      <div class="accord-btn actv">
+                          <a href="javascript:">I want to make changes in my booking done on OurGuest.in, how do I do it?</a>
+                      </div>
+                      <div class="accord-target" style="display:block">
+                          <p>Write to us at <a href="mailto:contact@ourguest.in">contact@ourguest.in</a> or call our support number (<a href="tel:+919734813101">+91 9734813101</a>, <a href="tel:+917031272572">+91 7031272572</a>) between 9 am to 8 pm on all days. We will make changes accordingly if it is possible.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">What are the prices for different group size (3, 5,6, and higher)?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>Please select the tour package of your choice and mention the number of guests travelling in the send enquiry form. We will get back to you with the prices accordingly. In every tour package mentioned on OurGuest’s website, the prices reduce as the number of people increases.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">Does OurGuest help in obtaining travel permits in restricted areas?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>Yes, we help in getting travel permits for our guests.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">Does OurGuest help in booking flight tickets too for the travel?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>No. We are really sorry but currently we do not provide flight or train booking facilities</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">What all kinds of stay options does OurGuest provide?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>OurGuest mainly provides homestays, resorts, retreats and farmstays as our accommodation option. We believe our guests will enjoy their holidays better in these places vis-a-vis commercial hotels. We provide standard and premium stay arrangements depending upon your choice of package. If the guest wants to stay in a commercial hotel, we can likewise provide commercial hotel accommodation too.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">Does OurGuest provide weekend getaways of short duration ranging from 2-3 days?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>Yes, OurGuest provides short weekend getaways as well as long tours. All our tours on the site are customizable and we can tailor it according to your requirements. Please check the tour package you like and mention your requirements in the send enquiry form. We will accordingly get in touch with you to help you design the tour package that suits you.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">Does OurGuest help in providing information about the best places to explore depending upon the season?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>Yes, OurGuest provides information about the best destinations in Sikkim and North East India. Please write to us in our Contact page and our team will get in touch with to help you choose the best places.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">What is the cancellation policy of OurGuest?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>For tour package cancellations, please check the cancellation policy in the tour page. If cancellations are made 30 days or more prior to scheduled trip start date, you will get full refund minus Rs 500 service fee. For Homestay cancellations, we provide full refund minus service charge (Rs 500) if the cancellation is made before 30 days of scheduled arrival. Within 30 days of scheduled arrival, the cancellation policy will be as per the respective property cancellation policies. We will provide you these details via email before you book with us.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">How do I know my booking is confirmed?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>After you make an initial payment, an automated message will come to your registered email id with the confirmation.</p>
+                      </div>
+                  </div>
+                  <div class="termsbox">
+                      <div class="accord-btn">
+                          <a href="javascript:">What is the advance amount that I have to pay for booking tour/homestay with OurGuest?</a>
+                      </div>
+                      <div class="accord-target">
+                          <p>50% advance payment needs to be made to book the tour package. For homestay booking, guests need to pay 20% advance if they are booking 30 days prior to scheduled arrival. Within 30 days of scheduled stay, guests need to pay full amount to book the accommodation.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>

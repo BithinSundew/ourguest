@@ -1,0 +1,181 @@
+<section class="og__testimonials bg--">
+  <div class="main-container">
+    <div class="inner-container">
+      <!-- swipe nav -->
+      <div class="swiper-nav">
+        <div class="swiper-button-prev swiper_8--prev" (click)="testiOwlCar.prev()"></div>
+        <div class="swiper-button-next swiper_8--next" (click)="testiOwlCar.next()"></div>
+      </div>
+      <div class="swiper swiper_8 testislider">
+        <owl-carousel-o [options]="owlCarouselOptions" #testiOwlCar>
+          <ng-container *ngFor="let slide of apiData">
+            <ng-template class="slide" carouselSlide [id]="slide.id">
+              <div class="testimonial_card">
+                <div class="profile">
+                  <img src="assets/img/static/author1.png" />
+                </div>
+                <article class="flow-rootX2">
+                  <div class="desc">
+                    <p>
+                      We were 3 guys and had a wonderful stay for 4 days.
+                      Amazing hospitality and food prepared by the hosts Sonam
+                      and her brother.
+                    </p>
+                  </div>
+                  <div class="authorwrap">
+                    <div class="author h5">
+                      Nikhil Aditya <b class="c--lgrn"></b
+                      ><span class="h6">Traveler</span>
+                    </div>
+                    <div class="star-rating" data-rating="5">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="testimonial_card">
+                <div class="profile">
+                  <img src="assets/img/static/author1.png" />
+                </div>
+                <article class="flow-rootX2">
+                  <div class="desc">
+                    <p>
+                      We were 3 guys and had a wonderful stay for 4 days.
+                      Amazing hospitality and food prepared by the hosts Sonam
+                      and her brother.
+                    </p>
+                  </div>
+                  <div class="authorwrap">
+                    <div class="author h5">
+                      Nikhil Aditya <b class="c--lgrn"></b
+                      ><span class="h6">Traveler</span>
+                    </div>
+                    <div class="star-rating" data-rating="5">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="testimonial_card">
+                <div class="profile">
+                  <img src="assets/img/static/author1.png" />
+                </div>
+                <article class="flow-rootX2">
+                  <div class="desc">
+                    <p>
+                      We were 3 guys and had a wonderful stay for 4 days.
+                      Amazing hospitality and food prepared by the hosts Sonam
+                      and her brother.
+                    </p>
+                  </div>
+                  <div class="authorwrap">
+                    <div class="author h5">
+                      Nikhil Aditya <b class="c--lgrn"></b
+                      ><span class="h6">Traveler</span>
+                    </div>
+                    <div class="star-rating" data-rating="5">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="testimonial_card">
+                <div class="profile">
+                  <img src="assets/img/static/author1.png" />
+                </div>
+                <article class="flow-rootX2">
+                  <div class="desc">
+                    <p>
+                      We were 3 guys and had a wonderful stay for 4 days.
+                      Amazing hospitality and food prepared by the hosts Sonam
+                      and her brother.
+                    </p>
+                  </div>
+                  <div class="authorwrap">
+                    <div class="author h5">
+                      Nikhil Aditya <b class="c--lgrn"></b
+                      ><span class="h6">Traveler</span>
+                    </div>
+                    <div class="star-rating" data-rating="5">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="testimonial_card">
+                <div class="profile">
+                  <img src="assets/img/static/author1.png" />
+                </div>
+                <article class="flow-rootX2">
+                  <div class="desc">
+                    <p>
+                      We were 3 guys and had a wonderful stay for 4 days.
+                      Amazing hospitality and food prepared by the hosts Sonam
+                      and her brother.
+                    </p>
+                  </div>
+                  <div class="authorwrap">
+                    <div class="author h5">
+                      Nikhil Aditya <b class="c--lgrn"></b
+                      ><span class="h6">Traveler</span>
+                    </div>
+                    <div class="star-rating" data-rating="5">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="testimonial_card">
+                <div class="profile">
+                  <img src="assets/img/static/author1.png" />
+                </div>
+                <article class="flow-rootX2">
+                  <div class="desc">
+                    <p>
+                      We were 3 guys and had a wonderful stay for 4 days.
+                      Amazing hospitality and food prepared by the hosts Sonam
+                      and her brother.
+                    </p>
+                  </div>
+                  <div class="authorwrap">
+                    <div class="author h5">
+                      Nikhil Aditya <b class="c--lgrn"></b
+                      ><span class="h6">Traveler</span>
+                    </div>
+                    <div class="star-rating" data-rating="5">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>

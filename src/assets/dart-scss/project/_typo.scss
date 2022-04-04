@@ -1,0 +1,171 @@
+@use './../abstracts/mixin' as *;
+
+/* ===== @import font-family ====== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+@font-face {
+    font-family: 'Bauhaus Md BT';
+    src: url('./../../fonts/BauhausITCbyBT-Medium.woff2') format('woff2'),
+        url('./../../fonts/BauhausITCbyBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('./../../fonts/ProductSans-Regular.woff2') format('woff2'),
+        url('./../../fonts/ProductSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+$allFontWeight:(
+    t   :  100,  // thin
+    el  :  200,  // extra light
+    l   :  300,  // light
+    r   :  400,  // regular
+    m   :  500,  // medium
+    sb  :  600,  // semi bold
+    b   :  700,  // bold
+    eb  :  800,  // extra bold
+    blk :  900   // black
+);
+
+@mixin fw($key) {
+    font-weight: map-get($allFontWeight, $key) !important;
+}
+
+//-- FONT WEIGHT CLASS --//
+@each $fwName, $fwValue in $allFontWeight{
+    .fw--#{$fwName}{
+        font-weight: $fwValue !important;
+    }
+}
+
+:root{
+    --ff-body: 'Rubik', Tahoma, sans-serif;
+    --ff-heading: 'Bauhaus Md BT', Times New Roman, serif;
+    @media (min-width: 1541px) {
+        font-size: 18px;
+        --ff-root:18px;
+    }
+    @media (max-width: 1540px) {
+        font-size: 14.4px;
+        --ff-root:14.4px;
+    }
+}
+
+.h2{
+    font-size: 40px;
+    line-height: 1.4;
+    @media (max-width: 1540px) {
+        font-size: 36px;
+    }
+    @media (max-width: 1140px) {
+        font-size: 32px;
+    }
+    @media (max-width: 1099px) {
+        font-size: 28px;
+    }
+    @media (max-width: 668px) {
+        font-size: 26px;
+    }
+}
+
+.h3{
+    font-size: 35px;
+    line-height: 1.4;
+    @media (max-width: 1540px) {
+        font-size: 30px;
+    }
+    @media (max-width: 1140px) {
+        font-size: 28px;
+    }
+    @media (max-width: 1099px) {
+        font-size: 25px;
+    }
+    @media (max-width: 668px) {
+        font-size: 22px;
+    }
+}
+
+.h4{
+    font-size: 25px;
+    line-height: 1.4;
+    @media (max-width: 1540px) {
+        font-size: 21px;
+    }
+    @media (max-width: 1140px) {
+        font-size: 20px;
+    }
+    @media (max-width: 1099px) {
+        font-size: 19px;
+    }
+}
+
+.h5{
+    font-size: 20px;
+    line-height: 1.4;
+    @media (max-width: 1540px) {
+        font-size: 18px;
+    }
+}
+
+.h6{
+    font-size: 18px;
+    line-height: 1.4;
+    @media (max-width: 1540px) {
+        font-size: 17px;
+    }
+    @media (max-width: 1140px) {
+        font-size: 16px;
+    }
+}
+
+.desc{
+    font-size: 18px;
+    @media (max-width: 1540px) {
+        font-size: 14.4px;
+    }
+}
+
+.medium{
+    @include fw(m);
+}
+
+.semi-bold{
+    @include fw(sb);
+}
+
+.bold{
+    @include fw(b);
+}
+
+.small-text{
+    font-size: 16px;
+}
+
+.two--line,
+.three--line,
+.four--line{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.two--line{
+    -webkit-line-clamp: 2;
+}
+
+.three--line{
+    -webkit-line-clamp: 3;
+}
+
+.four--line{
+    -webkit-line-clamp: 4;
+}

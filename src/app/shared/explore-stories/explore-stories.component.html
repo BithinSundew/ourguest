@@ -1,0 +1,85 @@
+<section class="og__stories-carousel">
+  <div class="main-container">
+    <div class="inner-container flow-rootX2">
+      <div class="og__section--header">
+        <div class="flow-rootx2">
+          <h3 class="h3">Explore our latest stories</h3>
+          <p>Travel stories and experiences</p>
+        </div>
+        <a
+          href="stories.php"
+          class="btn bg--lgrn c--white hvr:bg--dgrn size:expandedX"
+          >VIEW ALL STORIES</a
+        >
+      </div>
+      <div class="grid-2">
+        <div class="card-style--4">
+          <figure>
+            <img
+              src="assets/img/static/stories-hero.jpg"
+              alt="How to road trip the North East part of India"
+              title="How to road trip the North East part of India"
+            />
+          </figure>
+          <article class="flow-rootx2">
+            <span class="c--dgrn d-inline-block">Travel</span>
+            <h4 class="h3">
+              <a href="stories-details.php"
+                >How to road trip the North East part of India</a
+              >
+            </h4>
+            <p class="fw--l">
+              <span>February 4th, 2022</span> • <span>5 min read</span>
+            </p>
+          </article>
+        </div>
+
+        <div class="of-hidden">
+<div class="w-100p">
+
+   <owl-carousel-o [options]="customOptions"  #owlCarosel>
+    <ng-container *ngFor="let slide of apiData">
+        <ng-template
+            class="slide"
+            carouselSlide
+            [id]="slide.id"
+        >
+        <div class="card-style--5 flow-root">
+          <figure>
+            <a href="stories-details.php"
+              ><img
+                src="assets/img/static/story-1.jpg"
+                alt="How to road trip the North East part of India"
+                title="How to road trip the North East part of India"
+            /></a>
+          </figure>
+          <article class="flow-root">
+            <span class="c--lgrn d-inline-block">Activities</span>
+            <h4 class="h4">
+              <a href="stories-details.php"
+                >How to road trip the North East part of India</a
+              >
+            </h4>
+            <p class="c--light-txt">
+              <span>February 4th, 2022</span> •
+              <span>5 min read</span>
+            </p>
+          </article>
+        </div>
+        </ng-template>
+    </ng-container>
+
+</owl-carousel-o>
+</div>
+
+
+          <!-- swipe nav -->
+          <div class="swiper-nav">
+            <div class="swiper-button-prev swiper_2--prev"  (click)="owlCarosel.prev()"></div>
+            <div class="swiper-button-next swiper_2--next"  (click)="owlCarosel.next()"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

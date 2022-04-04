@@ -1,0 +1,52 @@
+<section class="og__instafeed mt-0 bg--">
+  <div class="main-container">
+    <div class="inner-container">
+      <div class="heading">
+        <h3 class="h3">#Ourguest</h3>
+        <div class="socialshare">
+          <p class="h5">Follow us:</p>
+          <span
+            ><a
+              href="https://www.facebook.com/OurGuestin-147625545804570/"
+              target="_blank"
+              ><img src="assets/img/icons/facebook.svg" /></a
+          ></span>
+          <span
+            ><a href="https://twitter.com/OurGuest_travel" target="_blank"
+              ><img src="assets/img/icons/twitter.svg" /></a
+          ></span>
+          <span
+            ><a href="http://instagram.com/ourguestdiary/" target="_blank"
+              ><img src="assets/img/icons/instagram.svg" /></a
+          ></span>
+        </div>
+      </div>
+      <div class="instafeed">
+        <div class="swiper-nav">
+          <div class="swiper-button-prev swiper_insta--prev" (click)="owlCar.prev()"></div>
+          <div class="swiper-button-next swiper_insta--next" (click)="owlCar.next()"></div>
+        </div>
+        <div class="swiper swiper_insta">
+          <owl-carousel-o [options]="customOptions" #owlCar>
+            <ng-container *ngFor="let slide of apiData">
+                <ng-template
+                    class="slide"
+                    carouselSlide
+                    [id]="slide.id"
+                >
+                <span>
+                  <a href="javascript:">
+                    <img src="assets/img/instagram/instafeed1.jpg" />
+                    <p>@teagarden_darjeeling</p>
+                  </a>
+                </span>
+                </ng-template>
+            </ng-container>
+
+        </owl-carousel-o>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

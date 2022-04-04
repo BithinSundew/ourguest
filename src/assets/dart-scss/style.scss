@@ -1,0 +1,19 @@
+
+@use './layout/normalize';
+@use './abstracts/util';
+@use './abstracts/flex';
+@use './components/tab';
+// @use './components/menu';
+@use './components/buttons';
+@use './components/form';
+@use './components/accordion';
+@use './project/modal';
+@use './project/main';
+
+
+.card-style--1 figcaption .link-arw img {
+  // display: block;
+   width: auto !important;
+}
+
+

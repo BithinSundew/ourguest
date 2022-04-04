@@ -1,0 +1,264 @@
+@use './../abstracts/mixin' as *;
+@use './../abstracts/flex-mixin' as *;
+@use './colors' as *;
+@use './typo' as *;
+@use './common' as *;
+
+
+.sds-modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(#000, 0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0.3s;
+
+    // MODAL CENTER
+    &.sds-modal-center{
+        overflow: auto;
+        .sds-modal-box{
+            width: 92%;
+            position: absolute;
+            max-width: 600px;
+            transform:translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            margin-bottom: 40px;
+            opacity: 0;
+            will-change: opacity,top;
+            transition: 0.2s linear;
+            @media (max-width: 1540px){
+              max-width: 500px;
+            }
+            @media (max-width: 575px){
+              margin-top: 20px;
+            }
+            &.small-2{
+                max-width: 400px;
+            }
+        }
+        &.is-active{
+            opacity: 1;
+            pointer-events: auto;
+            transition: 0.3s;
+            .sds-modal-box{
+                opacity: 1;
+                transition-delay: 0.3s;
+            }
+        }
+    }
+
+    // MODAL SIDE
+    &.sds-modal-side{
+        overflow: hidden;
+        .sds-modal-box{
+            width: 900px;
+            position: absolute;
+            height: 100vh;
+            background-color: color(white);
+            overflow: auto;
+            float: right;
+            transform: translateX(100%);
+            opacity: 0;
+            will-change: opacity, transform;
+            transition: 0.2s linear;
+        }
+        &.is-active{
+            opacity: 1;
+            pointer-events: auto;
+            transition: 0.3s;
+            .sds-modal-box{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.sds-modal-header{
+    width: 100%;
+    padding: 15px 25px;
+    background-color: color(lgrn);
+    border-radius: 1em 1em 0 0;
+    position: relative;
+}
+
+.sds-modal-content {
+    padding: 0;
+    background-color: color(white);
+    overflow: hidden;
+    border-radius: 1em;
+    .sds-modal-close{
+      width:30px;
+      height:30px;
+      top: 20px;
+      right: 25px;
+      opacity: 1;
+      z-index: 999;
+      position: absolute;
+      font-weight: 500;
+      @media (max-width: 1540px) {
+        top: 16px;
+      }
+      &:before, &:after{
+        background-color: color(white);
+        right: 3px;
+        margin-top: -2px;
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .formarea {
+    padding: 30px;
+    h4 {
+      display: none;
+    }
+    .form-style {
+      .email,.password {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0.5;
+          width: 30px;
+          height: 30px;
+        }
+        .form-field {
+          padding-right: 45px;
+        }
+        &.has-value{
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+      .email{
+        &:before {
+          background: url(./../../img/icons/email.svg) no-repeat center center;
+          background-size: 25px;
+          @media (max-width: 1540px) {
+            background-size: 20px;
+          }
+        }
+      }
+      .password{
+        &:before {
+          background: url(./../../img/icons/password.svg) no-repeat center center;
+          background-size: 25px;
+          @media (max-width: 1540px) {
+            background-size: 20px;
+          }
+        }
+      }
+    }
+    .forgetpassword {
+      padding: 10px 0 25px;
+      text-align: center;
+      @include d-flex(r, sb, fs);
+      a {
+        font-size: 16px;
+        color: #7d7d7d;
+        transition: 0.4s;
+        @media (max-width: 1540px) {
+          font-size: 12.8px;
+        }
+        &:hover {
+          color: color(lgrn);
+        }
+      }
+    }
+    .btn {
+      text-transform: uppercase;
+    }
+    .loginwith{
+      margin: 20px 0 0 0;
+      .or {
+        position: relative;
+        color: color(black);
+        &::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          top: 50%;
+          background-color: color(border);
+          height: 1px;
+          z-index: 1;
+        }
+        span {
+          padding: 0 20px;
+          background-color: color(white);
+          position: relative;
+          z-index: 9;
+          
+        }
+      }
+      .alternate {
+        @include d-flex(r, sb, c);
+        @media (max-width: 575px){
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .blk {
+          border-radius: 50px;
+          padding: 5px 15px;
+          border: 1px solid color(black);
+          transition: 0.4s;
+          overflow: hidden;
+          width: 48%;
+          @media (max-width: 575px){
+            width: 100%;
+          }
+          a {
+            color: color(black);
+            font-size: 16px;
+            text-align: center;
+            line-height: 32px;
+            display: block;
+            @media (max-width: 1540px) {
+              font-size: 12.8px;
+            }
+            span {
+              float: left;
+              margin: 0 15px 0 0;
+              @media (max-width: 1540px) {
+                margin: 0 5px 0 0;
+              }
+              img{
+                @media (max-width: 1540px) {
+                  width: 22px;
+                }
+              }
+            }
+          }
+          &:hover {
+            border-color: color(lgrn);
+          }
+        }
+      }
+    }
+  }

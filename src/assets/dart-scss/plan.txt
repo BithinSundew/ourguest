@@ -1,0 +1,62 @@
+this is ****DART SASS*****
+
+components
+	_buttons.scss => cta, butns
+	_accordian.scss
+	_tab.scss
+	_shadow.scss
+	_tooltip.scss
+	_modal.scss => mdl (video, img gallery)
+	_tags.scss
+	_star-rating.scss
+
+
+layout
+	_normalize.scss
+	_nav.scss
+	_flex.scss
+	_dgrid.scss
+	_%grid.scss
+	_form.scss => form-style
+	_table.scss
+
+
+abstracts
+	_mixin.scss
+	_functions.scss
+	_util.scss
+
+
+project
+	_colors.scss
+	_typo.scss
+	_breakpoints.scss (optional)
+	_variable.scss => font-family, font-size, text color, body color, container width
+	_main.scss
+
+
+vendors
+	_carousel.scss
+	_jqui.scss (calender, timepicker)
+
+
+
+style.scss => style.min.css /  style.css
+
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+scripts
+
+	modal
+	accordian
+	tab
+	form
+	vh => onload, resize
+	nav => hammenu
+	jqui
+	custom selectbox with tag
+	slide-form

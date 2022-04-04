@@ -1,0 +1,229 @@
+@use './../project/colors' as *; 
+@use './../project/typo' as *; 
+
+  
+  .repair-form {
+      position: relative;
+      label {
+        position: absolute;
+        z-index: 9;
+        top: 19px;
+        left: 44px;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.0015em;
+        color: rgba(0, 0, 0, 0.6);
+        background: #fff;
+        padding: 0 8px;
+      }
+     
+      select {
+          display: none !important;
+      }
+      
+      .dropdown-select {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        height: 42px;
+        line-height: 40px;
+        outline: none;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        white-space: nowrap;
+        
+        .current {
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.87);
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0);
+            background-color: #fff;
+            color: color(blue-1);
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-family: $roboto;
+            font-size: 12px;
+            font-weight: 500;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            white-space: nowrap;
+            padding-left: 15px;
+            width: 100%;
+    
+        }
+    
+        &:focus {
+            background-color: #fff;
+        }
+    
+        &:hover {
+            background-color: #fff;
+        }
+    
+        &:active,
+        &.open {
+            background-color: #fff !important;
+            border-color: #bbb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+        }
+        
+        &:after {
+            height: 0;
+            width: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 5px solid color(blue-1);
+            -webkit-transform: origin(50% 20%);
+            transform: origin(50% 20%);
+            transition: all 0.125s ease-in-out;
+            content: '';
+            display: block;
+            margin-top: -2px;
+            pointer-events: none;
+            position: absolute;
+            right: 10px;
+            top: 19px;
+        }
+        &.open {
+            height: 100%;
+            &:after {
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
+    
+            .list {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+                pointer-events: auto;
+            }
+    
+            .option {
+                cursor: pointer;
+            }
+        }
+    
+        &.wide {
+            width: 100%;
+            &.wide {
+                .list {
+                    left: 0 !important;
+                    right: 0 !important;
+                }
+            }
+        }
+    
+        .list {
+            transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+            background-color: #fff;
+            border-radius: 6px;
+            margin-top: 4px;
+            padding: 3px 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            position: static;
+            top: 100%;
+            left: 0;
+            z-index: 999;
+            max-height: 250px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            &:hover {
+                .option {
+                    &:not(:hover) {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    
+        .dd-search{
+            overflow:hidden;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin:0.5rem;
+            display: none;
+        }
+    
+        .dd-searchbox {
+        width:90%;
+        padding:0.5rem;
+        border:1px solid #999;
+        border-color:#999;
+        border-radius:4px;
+        outline:none;
+            &:focus{
+               border-color:#12CBC4;
+            }
+        }
+      }
+      
+      .dropdown-select .list ul {
+          padding: 0;
+      }
+      
+      .dropdown-select .option {
+          cursor: default;
+          font-family: $roboto;
+          font-weight: 500;
+          line-height: 40px;
+          outline: none;
+          font-size: 12px;
+          padding-left: 12px;
+          padding-right: 29px;
+          text-align: left;
+          transition: all 0.2s;
+          list-style: none;
+      }
+      
+      .dropdown-select .option:hover,
+      .dropdown-select .option:focus {
+        background: rgba(166, 206, 229, 0.38);
+        color: color(blue-1);
+      }
+      
+      .dropdown-select .option.selected {
+          font-weight: 600;
+          color: color(blue-1);
+      }
+      
+      .dropdown-select .option.selected:focus {
+        background: rgba(166, 206, 229, 0.38);
+        color: color(blue-1);
+      }
+      
+      .dropdown-select a {
+          color: #aaa;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
+      }
+      
+      .dropdown-select a:hover {
+          color: #666;
+      }
+      
+  }
